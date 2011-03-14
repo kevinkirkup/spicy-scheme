@@ -1,0 +1,16 @@
+; -*-scheme-*-
+; vim:ft=scheme:
+;
+; ~/.csirc
+
+; Use Readline support on the REPL
+(use readline regex)
+(current-input-port
+  (make-gnu-readline-port))
+
+; Use a history file for REPL
+(gnu-history-install-file-manager 
+  (string-append (or (getenv "HOME") ".") "/.csi.history"))
+
+; Enable readline VI mode
+(gnu-readline-parse-and-bind "set editing-mode vi")
