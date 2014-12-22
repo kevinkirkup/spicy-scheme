@@ -4,7 +4,7 @@
 ; ~/.csirc
 
 ; Use Readline support on the REPL
-(use readline regex)
+(use readline regex trace)
 (current-input-port
   (make-gnu-readline-port))
 
@@ -14,3 +14,4 @@
 
 ; Enable readline VI mode
 (gnu-readline-parse-and-bind "set editing-mode vi")
+
